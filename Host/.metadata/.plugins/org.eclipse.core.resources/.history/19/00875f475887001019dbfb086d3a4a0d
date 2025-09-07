@@ -1,0 +1,19 @@
+/*
+ * array.c
+ *
+ *  Created on: Sep 1, 2025
+ *      Author: NIKHIL
+ */
+
+
+#include<stdint.h>
+#include<stdio.h>
+
+int main(){
+
+	uint32_t studentAge[100];
+	printf("Size of Array : %u \n", sizeof(studentAge));
+	printf("Base address : %p", studentAge);
+
+	return 0;
+}

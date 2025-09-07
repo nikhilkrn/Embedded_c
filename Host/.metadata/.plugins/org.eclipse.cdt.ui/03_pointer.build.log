@@ -1,0 +1,7 @@
+23:19:17 **** Rebuild of configuration Debug for project 03_pointer ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o understanding_pointer.o "..\\understanding_pointer.c" 
+gcc -o 03_pointer.exe understanding_pointer.o 
+
+23:19:18 Build Finished. 0 errors, 0 warnings. (took 666ms)
+

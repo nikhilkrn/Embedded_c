@@ -1,0 +1,41 @@
+/*
+ * main.c
+ *
+ *  Created on: Sep 1, 2025
+ *      Author: NIKHIL
+ */
+
+
+#include<stdio.h>
+#include<stdint.h>
+
+void arr_Swap(uint32_t *pArrA, uint32_t *pArrB,uint32_t size);
+
+int main(){
+	uint32_t sizeArrA, sizeArrB;
+	printf("Enter the size of array A and array B: ");
+	scanf("%d %d", &sizeArrA,sizeArrB);
+
+	int32_t arrA[sizeArrA];
+	int32_t arrB[sizeArrB];
+
+	uint32_t sizeGreater = (sizeArrA >= sizeArrB) ? sizeArrA : sizeArrB;
+
+	arr_Swap(arrA, arrB, sizeGreater);
+
+
+	return 0;
+
+}
+
+void arr_Swap(uint32_t *pArrA, uint32_t *pArrB,uint32_t size){
+	for(uint32_t i = 0; i < size; i++){
+
+		uint32_t temp = pArrA[i];
+		pArrA[i] = pArrB[i];
+		pArrB[i] = temp;
+
+		printf("%d) %d \t %d",i,pArrA[i],pArrB[i]);
+
+	}
+}

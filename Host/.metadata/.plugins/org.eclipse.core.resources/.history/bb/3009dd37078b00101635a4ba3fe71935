@@ -1,0 +1,37 @@
+/*
+ * main.c
+ *
+ *  Created on: Sep 6, 2025
+ *      Author: NIKHIL
+ */
+
+#include<stdio.h>
+#define TRI_AREA
+
+
+int main(void){
+
+
+//#if 0 	 // this is decleration if one type of condition compilation derivative
+	float radius = 0;
+	printf("Area of circle calculation\n");
+	fflush(stdout);
+	printf("Enter radius : ");
+	fflush(stdout);
+	scanf("%f",&radius);
+	printf("Area of circle : %f\n",(3.1415 * radius * radius));
+	fflush(stdout);
+//#else
+
+#ifdef TRI_AREA
+	float base , height;
+	printf("Calculating triangle area ");
+	fflush(stdout);
+	printf("Enter base and height: ");
+	fflush(stdout);
+	scanf("%f%f",&base, &height);
+	printf("Area of trianlge: %f", (0.5 *base*height));
+
+#endif
+	return 0;
+}

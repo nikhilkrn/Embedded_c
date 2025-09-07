@@ -1,0 +1,7 @@
+23:19:31 **** Rebuild of configuration Debug for project p06_compare2num ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o compare.o "..\\compare.c" 
+gcc -o p06_compare2num.exe compare.o 
+
+23:19:32 Build Finished. 0 errors, 0 warnings. (took 686ms)
+

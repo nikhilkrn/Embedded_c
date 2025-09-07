@@ -1,0 +1,7 @@
+23:19:23 **** Rebuild of configuration Debug for project P02_average ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\P02_average_updated.o" "..\\src\\P02_average_updated.c" 
+gcc -o P02_average.exe "src\\P02_average_updated.o" 
+
+23:19:23 Build Finished. 0 errors, 0 warnings. (took 563ms)
+

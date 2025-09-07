@@ -1,0 +1,7 @@
+23:19:25 **** Rebuild of configuration Debug for project P09_bitwiseCalc ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o bitwise.o "..\\bitwise.c" 
+gcc -o P09_bitwiseCalc.exe bitwise.o 
+
+23:19:26 Build Finished. 0 errors, 0 warnings. (took 671ms)
+

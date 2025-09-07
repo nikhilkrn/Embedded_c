@@ -1,0 +1,17 @@
+11:45:58 **** Incremental Build of configuration Debug for project 005_BitExtraction ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "005_BitExtraction.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Embedded-C\My_Workspace\Target\005_BitExtraction\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="005_BitExtraction.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 005_BitExtraction.elf
+ 
+arm-none-eabi-size  005_BitExtraction.elf 
+arm-none-eabi-objdump -h -S 005_BitExtraction.elf  > "005_BitExtraction.list"
+   text	   data	    bss	    dec	    hex	filename
+   4848	     92	   1900	   6840	   1ab8	005_BitExtraction.elf
+Finished building: default.size.stdout
+ 
+Finished building: 005_BitExtraction.list
+ 
+
+11:45:59 Build Finished. 0 errors, 0 warnings. (took 1s.307ms)
+

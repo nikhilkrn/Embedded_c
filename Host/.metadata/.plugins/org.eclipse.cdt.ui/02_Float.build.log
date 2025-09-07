@@ -1,0 +1,7 @@
+23:19:17 **** Rebuild of configuration Debug for project 02_Float ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o 02_Float.exe main.o 
+
+23:19:17 Build Finished. 0 errors, 0 warnings. (took 667ms)
+

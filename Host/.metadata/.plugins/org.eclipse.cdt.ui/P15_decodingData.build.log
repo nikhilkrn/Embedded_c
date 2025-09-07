@@ -1,0 +1,7 @@
+10:34:46 **** Rebuild of configuration Debug for project P15_decodingData ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o P15_decodingData.exe main.o 
+
+10:34:47 Build Finished. 0 errors, 0 warnings. (took 1s.244ms)
+

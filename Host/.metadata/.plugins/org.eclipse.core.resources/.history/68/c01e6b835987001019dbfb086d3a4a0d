@@ -1,0 +1,27 @@
+/*
+ * array.c
+ *
+ *  Created on: Sep 1, 2025
+ *      Author: NIKHIL
+ */
+
+
+#include<stdint.h>
+#include<stdio.h>
+
+int main(){
+
+	// initialization
+	uint32_t studentAge[100];
+	uint8_t len = 10;
+	uint8_t data[len] = {0xFF, 0xFF, 0xFE, 0xFD }; // remaining are 0, same as {0xFF, 0xFF, 0xFE, 0xFD, 0, 0, 0, 0, 0, 0}
+
+	// size and address of array
+	printf("Size of Array : %u \n", sizeof(studentAge));
+	printf("Base address : %p \n", studentAge);
+
+	// read and write
+	printf("Data of array of index 6: %X" ,data[0]);
+
+	return 0;
+}

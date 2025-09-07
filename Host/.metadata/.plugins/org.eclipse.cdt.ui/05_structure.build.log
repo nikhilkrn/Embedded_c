@@ -1,0 +1,14 @@
+23:19:19 **** Rebuild of configuration Debug for project 05_structure ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o structure.o "..\\structure.c" 
+..\structure.c: In function 'main':
+..\structure.c:38:31: warning: unknown conversion type character 'z' in format [-Wformat=]
+  printf("Size of structure : %zu",sizeof(struct carModel)); // will give 16 byte supposed to be 14 bytes
+                               ^
+..\structure.c:38:9: warning: too many arguments for format [-Wformat-extra-args]
+  printf("Size of structure : %zu",sizeof(struct carModel)); // will give 16 byte supposed to be 14 bytes
+         ^~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o 05_structure.exe structure.o 
+
+23:19:19 Build Finished. 0 errors, 2 warnings. (took 756ms)
+

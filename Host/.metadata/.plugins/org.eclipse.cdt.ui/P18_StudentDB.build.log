@@ -1,0 +1,6 @@
+12:04:18 **** Incremental Build of configuration Debug for project P18_StudentDB ****
+Info: Internal Builder is used for build
+gcc -o P18_StudentDB.exe main.o 
+
+12:04:18 Build Finished. 0 errors, 0 warnings. (took 513ms)
+

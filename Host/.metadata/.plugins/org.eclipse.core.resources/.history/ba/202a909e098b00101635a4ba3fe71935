@@ -1,0 +1,54 @@
+/*
+ * main.c
+ *
+ *  Created on: Sep 6, 2025
+ *      Author: NIKHIL
+ */
+
+#include<stdio.h>
+#define TRI_AREA
+//#define CIR_AREA
+
+
+#undef TRI_AREA // undefining a macros
+
+
+
+
+int main(void){
+
+#if !defined (TRI_AREA) && !defined(CIR_AREA)		// throw error if one of the macros is not defined.
+	#error "MACROS NOT DEFINED !!"
+#endif
+	//conditional statement with macros
+
+#if defined(TRI_AREA) && defined (CIR_AREA)			// only be printed if both macros are defined.
+	print("I WILL ONLY BE EXECUTED IF BOTH MACROS ARE DEFINED !!!");
+#endif
+
+#ifdef	CIR_AREA	// execute only when CIR_AREA is defined
+//#if 0 	 // this is decleration if one type of condition compilation derivative
+	float radius = 0;
+	printf("Area of circle calculation\n");
+	fflush(stdout);
+	printf("Enter radius : ");
+	fflush(stdout);
+	scanf("%f",&radius);
+	printf("Area of circle : %f\n",(3.1415 * radius * radius));
+	fflush(stdout);
+//#else
+#endif
+
+#ifndef TRI_AREA
+//#ifdef TRI_AREA		// if the TRI_AREA macros is defined then only this block will be executed
+	float base , height;
+	printf("Calculating triangle area ");
+	fflush(stdout);
+	printf("Enter base and height: ");
+	fflush(stdout);
+	scanf("%f%f",&base, &height);
+	printf("Area of triangle: %f", (0.5 *base*height));
+
+#endif
+	return 0;
+}

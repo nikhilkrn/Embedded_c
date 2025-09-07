@@ -1,0 +1,25 @@
+/*
+ * strings.c
+ *
+ *  Created on: Sep 3, 2025
+ *      Author: NIKHIL
+ */
+
+#include<stdio.h>
+#include<stdint.h>
+
+int main(){
+
+	char msg[] = "Hello";
+	char const*pMsg = "World";
+
+	msg[0] = "C";
+	pMsg = "K";
+	printf("Message : %s\n",msg);
+	printf("Message : %s\n",pMsg);
+	printf("Address of pMsg : %p",&pMsg);
+	printf("Value of pMsg : %p",pMsg);
+
+
+	return 0;
+}

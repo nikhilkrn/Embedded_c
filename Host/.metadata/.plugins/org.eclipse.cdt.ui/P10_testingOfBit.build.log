@@ -1,0 +1,7 @@
+23:19:26 **** Rebuild of configuration Debug for project P10_testingOfBit ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o testingofbit.o "..\\testingofbit.c" 
+gcc -o P10_testingOfBit.exe testingofbit.o 
+
+23:19:26 Build Finished. 0 errors, 0 warnings. (took 639ms)
+

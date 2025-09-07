@@ -1,0 +1,140 @@
+/*
+ * main.c
+ *
+ *  Created on: Sep 5, 2025
+ *      Author: NIKHIL
+ */
+
+
+#include<stdio.h>
+#include<stdint.h>
+#include<string.h>
+
+
+typedef struct{
+	char name[30];
+	uint32_t rollno;
+	char DOB[10];
+	uint8_t sem;
+
+}student_data_t;
+
+student_data_t student[10];
+
+
+
+void AddData(student_data_t *pStudent);
+void DeleteData(student_data_t *pStudent);
+void DisplayData(student_data_t *pStudent);
+
+
+int main(){
+
+	uint8_t choice;
+	while(1){
+
+		printf("\n");
+		printf("1 => Add data\n");
+		printf("2 => Delete data\n");
+		printf("3 => Display data\n");
+		printf("0 => EXIT PROGRAM\n");
+		printf("select Choice: \n");
+		scanf("%d",&choice);
+		printf("\n\n");
+
+		if(choice == 1){
+			AddData(student);
+		}
+		else if (choice == 2) {
+			DeleteData(student);
+		}else if (choice == 3) {
+			 DisplayData(student);
+		}
+		else if (choice == 0) {
+			break;
+		}else {
+			printf("Enter Correct Choice !!! \n");
+		}
+	}
+	return 0;
+}
+
+
+void AddData(student_data_t *pStudent){
+	uint8_t flag = 0;
+	uint32_t rollNo;
+
+	printf("Enter rollno: ");
+	scanf("%d",&rollNo);
+
+	for(uint8_t i = 0 ; i < 10;i++){
+		if(pStudent->rollno == rollNo){
+			flag+=1;
+			break;
+		}
+		pStudent++;
+	}
+
+	if(flag == 0 ){
+		for(uint8_t i = 0 ; i < 10;i++){
+			if(pStudent->rollno == 0){
+				pStudent->rollno = rollNo;
+				printf("Enter Name: ");
+				scanf("%[^\t]s", pStudent->name);
+
+				printf("Enter DOB(MM/DD/YYYY): ");
+				scanf("%s", pStudent->DOB);
+
+				printf("Enter SEM: ");
+				scanf("%hd", pStudent->sem);
+				printf("Details added");
+				break;
+			}else{
+			pStudent++;
+			}
+		}
+	}
+	else{
+		printf("Roll no already exists\n");
+		printf("Retype again\n");
+	}
+}
+
+void DeleteData(student_data_t *pStudent){
+	uint32_t rollNo;
+	uint8_t flag = 0;
+
+	printf("Enter roll no : ");
+	scanf("%d",&rollNo);
+
+	for(uint8_t i = 0 ; i < 10;i++){
+
+		if(pStudent->rollno == rollNo){
+			flag = 1;
+			pStudent->rollno = 0;
+//			pStudent->DOB = "";
+//			pStudent->name = "";
+//			pStudent->sem = 0;
+		}
+		pStudent++;
+	}
+	if(flag == 0 ){
+		printf("data removed\n");
+	}
+	else {
+		printf("No record found");
+	}
+}
+
+void DisplayData(student_data_t *pStudent){
+
+	printf("Roll no \t Name \t DOB \t SEM\n");
+
+	for(uint8_t i = 0 ; i < 10;i++){
+		if(pStudent->rollno >= 1){
+			printf("%d \t %s \t %s \t %d \n",pStudent->rollno,pStudent->name,pStudent->DOB,pStudent->sem);
+		}
+		pStudent++;
+	}
+}
+

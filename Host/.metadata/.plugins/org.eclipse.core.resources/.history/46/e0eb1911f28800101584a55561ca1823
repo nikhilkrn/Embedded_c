@@ -1,0 +1,34 @@
+/*
+ * strings.c
+ *
+ *  Created on: Sep 3, 2025
+ *      Author: NIKHIL
+ */
+
+#include<stdio.h>
+#include<stdint.h>
+
+int main(){
+
+	char msg[] = "Hello"; // string variable decleration
+	char const*pMsg = "World"; 	// string literals decleration
+
+	msg[0] = 'C';
+//	pMsg[0] = "K"; 		// not able to edit this one coz. the data will be stored in ROM and pointer variable will be pointing to ROM and we cannot directly modify but in string variable case we can directly modify data as it will be stored in RAM
+	printf("Message : %s\n",msg);
+	printf("Message : %s\n",pMsg);
+	printf("Address of pMsg : %p\n",&pMsg);
+	printf("Value of pMsg : %p\n",pMsg);
+
+	//taking input
+	char name[10];
+	printf("Enter Name: ");
+	scanf("%s",name);
+	printf("Hello %s\n",name);
+	getchar();
+	getchar();
+	getchar();
+	getchar();
+
+	return 0;
+}

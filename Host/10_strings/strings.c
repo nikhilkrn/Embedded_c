@@ -1,0 +1,41 @@
+/*
+ * strings.c
+ *
+ *  Created on: Sep 3, 2025
+ *      Author: NIKHIL
+ */
+
+#include<stdio.h>
+#include<stdint.h>
+
+int main(){
+
+	char msg[] = "Hello"; // string variable decleration
+	char const*pMsg = "World"; 	// string literals decleration
+
+	msg[0] = 'C';
+//	pMsg[0] = "K"; 		// not able to edit this one coz. the data will be stored in ROM and pointer variable will be pointing to ROM and we cannot directly modify but in string variable case we can directly modify data as it will be stored in RAM
+	printf("Message : %s\n",msg);
+	printf("Message : %s\n",pMsg);
+	printf("Address of pMsg : %p\n",&pMsg);
+	printf("Value of pMsg : %p\n",pMsg);
+
+	//taking input
+	char name[10];
+	printf("Enter Name: ");
+	scanf("%s",name);	// no need to add &
+	printf("Hello %s\n",name);
+	// adding multiple getchar as if the variable is less than 10 then it will automatically fill the gap by null character so program get terminated as soon as it finish executing so we add multiple to counter this problem
+
+
+	//	this method of declaration not usefull if the user input two words separated by space between them coz only character before space will be considered
+	// so we use Scan set %[^s]s => this will terminate where ever there will be s in input given in input can also be considered any character by which if the user want to terminate, it will be terminated
+	//similarly %[\n]s is used whenever user enters new line by pressing enter then it stops executing
+
+	char name2[30];
+	printf("Enter anything you wanna type: ");
+	scanf("%s[^\t]s",name2);
+	printf("Entered string: %s\n",name2);
+
+	return 0;
+}

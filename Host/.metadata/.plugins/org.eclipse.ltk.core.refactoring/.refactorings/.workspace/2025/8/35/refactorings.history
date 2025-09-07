@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;P06_unionBitextraction&apos; to &apos;P16_unionBitextraction&apos;" description="Rename resource &apos;P06_unionBitextraction&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/P06_unionBitextraction" name="P16_unionBitextraction" stamp="1756292197375" updateReferences="true"/>
+</session>
